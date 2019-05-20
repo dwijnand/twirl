@@ -58,7 +58,8 @@ lazy val compiler = project
       name := "twirl-compiler",
       libraryDependencies += scalaCompiler(scalaVersion.value),
       libraryDependencies ++= scalaParserCombinators(scalaVersion.value),
-      fork in run := true
+      fork in run := true,
+      resolvers += Resolver.typesafeIvyRepo("releases")
     )
 
 lazy val plugin = project
